@@ -1,0 +1,37 @@
+
+/* Colors
+-------------------------------------------------------------- */
+$gray:          #a2a2af;
+$gray-dark:     #242424;
+$gray-dark-2:   #202020;
+$violet:        #8658eb;
+$violet-dark:   #652ae6;
+$green:         #1cd4a3;
+$red:           #ea3030;
+
+/* Typography
+-------------------------------------------------------------- */
+$base-family: 'Rubik', 'Arial', sans-serif;
+$font-color: $gray-dark-2;
+
+
+/* Breakpoints
+-------------------------------------------------------------- */
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm - 1) !default;
+$screen-sm-max:              ($screen-md - 1) !default;
+$screen-md-max:              ($screen-lg - 1) !default;
+
+
