@@ -1,0 +1,70 @@
+<div class='form'>
+  <p class="form__title">{{ formTitle }}</p>
+  <form id='formAccount' action="" name="form">
+
+    <div class="form__box">
+      <div class="form__group">
+        <input id='userName' name="userName" class="form__input required" type="text">
+
+        <label for="userName" class="form__placeholder">Your name</label>
+      </div>
+    </div>
+
+    <div class="form__box">
+      <p class="form__box-title">Mobile</p>
+
+      <div class="form__group form__group--inline">
+        <select name="countryPrefix" id="user-prefix">
+          <option value="+48">+48 (PL)</option>
+        </select>
+        <input id='user-phone' class="form__input required" type="text" placeholder="123 456 789" maxlength="9">
+      </div>
+
+    </div>
+
+    <div class="form__box">
+      <p class="form__box-title">Gender</p>
+      <div class="form__radio-group" [ngClass]="{active: selectedGender==='female'}" tabindex="0">
+        <input id="userGenderFemale" type="radio" name="gender" value="female" [(ngModel)]="gender" (click)="radioSelected('female')">
+        <label for="userGenderFemale" class="form__icon">
+          <span class="icon icon-female">
+
+          </span>
+        </label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </div>
+      <div class="form__radio-group" [ngClass]="{active: selectedGender==='male'}" tabindex="0">
+        <input id="userGenderMale" type="radio" name="gender" value="male" [(ngModel)]="gender" (click)="radioSelected('male')">
+        <label for="userGenderMale" class="form__icon">
+          <span class="icon icon-man">
+
+          </span>
+        </label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__box">
+      <p class="form__box-title">Date of birth</p>
+
+      <div class="form__group form__group--inline form__group--date">
+        <input id='userBirthDay' class="form__input form__input--box form__input--small" type="number" maxlength="2">
+        <span class="spliter"></span>
+        <input id='userBirthMonth' class="form__input form__input--box form__input--small-xs" type="text">
+        <span class="spliter"></span>
+        <input id='userBirthYear' class="form__input form__input--box" type="number" pattern="[0-9]{4}$" maxlength="4">
+      </div>
+    </div>
+
+    <button class="btn btn--arrow form__btn">
+      <span>Continue</span>
+      <span class="icon-box">
+        <span class="icon icon-arrow"></span>
+      </span>
+    </button>
+  </form>
+</div>

@@ -1,12 +1,26 @@
 /* Body, html
 -------------------------------------------------------------- */
 body, html{
-  font-size: 18px;
+  font-size: 14px;
   font-family: $base-family;
 }
 
 /* Headers
 -------------------------------------------------------------- */
-h1, h2, h3, h4 {
-  font-family: $base-family;
+h1{
+  margin: 0 0 20px;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
+
+  @media #{$media-sm-up}{
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+}
+
+p{
+  margin: 0 0 10px;
+  line-height: 1.7;
 }

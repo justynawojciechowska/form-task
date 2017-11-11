@@ -1,0 +1,67 @@
+/* Customer account
+-------------------------------------------------------------- */
+.your-account {
+  display: flex;
+  min-height: 100vh;
+  width: 778px;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+
+
+  /* Customer account title
+-------------------------------------------------------------- */
+  &__title {
+    width: 100%;
+    text-align: center;
+
+    @media #{$media-md-up} {
+      margin-left: 373px;
+      text-align: left;
+    }
+  }
+
+  /* Customer account wrapper
+-------------------------------------------------------------- */
+  &__wrapper {
+    display: flex;
+    height: 510px;
+    max-width: 100%;
+    margin-bottom: 25px; //align to absolute positioned btn
+    @include box-shadow($shadow-color);
+
+    @media #{$media-xs-up} {
+      height: 555px;
+    }
+  }
+
+  /* Customer account images
+-------------------------------------------------------------- */
+  &__img {
+    position: relative;
+    display: none;
+
+    @media #{$media-md-up} {
+      display: block;
+    }
+
+    .img-lines {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  /* Customer account form
+  -------------------------------------------------------------- */
+  &__form {
+    max-width: 100%;
+  }
+}
+
+

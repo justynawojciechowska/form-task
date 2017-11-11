@@ -1,13 +1,18 @@
 
 /* Colors
 -------------------------------------------------------------- */
-$gray:          #a2a2af;
+$gray:          #dcdce1;
+$gray-light:    #f2f2f5;
+$gray-light2:   #a2a2af;
 $gray-dark:     #242424;
 $gray-dark-2:   #202020;
 $violet:        #8658eb;
 $violet-dark:   #652ae6;
+$violet-hover:  #472a85;
+$violet-hover-2:#411998;
 $green:         #1cd4a3;
 $red:           #ea3030;
+$shadow-color:  rgba(35,35,39,0.3);
 
 /* Typography
 -------------------------------------------------------------- */
@@ -28,6 +33,9 @@ $screen-md:                  992px !default;
 
 // Large screen / wide desktop
 $screen-lg:                  1200px !default;
+
+// Large screen / wide desktop
+$screen-lg-xl:               1600px !default;
 
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-sm - 1) !default;

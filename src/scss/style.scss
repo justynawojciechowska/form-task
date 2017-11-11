@@ -1,15 +1,23 @@
 // Normalize
 @import './base/normalize';
 
-// Custom variables
+//Helpers
 @import './helpers/variables';
-
-//Custom mixins
 @import './helpers/mixins';
+@import './helpers/keyframes';
+@import './helpers/icons';
+
+//Layout styles
+@import './layout/layout';
+@import './layout/forms';
 
 //Base styles
 @import './base/base';
 @import './base/typography';
 
+//Components
+@import './components/buttons';
+@import './components/img-bckg';
 
-
+//Pages
+@import './pages/your-account';

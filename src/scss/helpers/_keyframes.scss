@@ -1,0 +1,28 @@
+
+@keyframes resizeBackgroundImage {
+  0% {
+    background-size: 85%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes changeLeftPosition {
+  0% {
+    left: 190px;
+  }
+  100% {
+    left: 217px;
+  }
+}
+
+@keyframes slideFromBottomRight {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
