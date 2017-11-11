@@ -12,6 +12,8 @@ export class FormComponent {
 
   radioSelected(value): void {
       this.selectedGender = value;
-      console.log(this.selectedGender);
+  }
+
+  formSubmit(): void {
   }
 }

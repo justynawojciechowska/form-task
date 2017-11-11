@@ -20,7 +20,7 @@ $media-xs-small : "#{$screen} and (max-width:#{$screen-xs})";
 /* Shadow
 -------------------------------------------------------------- */
 @mixin box-shadow($color) {
-  box-shadow: 0px 17px 50px -1px $color;
+  box-shadow: 0px 17px 50px -1px transparent;
 }
 
 /* Gradient
@@ -38,3 +38,4 @@ $media-xs-small : "#{$screen} and (max-width:#{$screen-xs})";
       GradientType=1
     );
 }
+

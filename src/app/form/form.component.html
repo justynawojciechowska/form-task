@@ -11,7 +11,7 @@
     </div>
 
     <div class="form__box">
-      <p class="form__box-title">Mobile</p>
+      <p class="form__box-title form__box-title--margin">Mobile</p>
 
       <div class="form__group form__group--inline">
         <select name="countryPrefix" id="user-prefix">
@@ -59,12 +59,12 @@
         <input id='userBirthYear' class="form__input form__input--box" type="number" pattern="[0-9]{4}$" maxlength="4">
       </div>
     </div>
-
-    <button class="btn btn--arrow form__btn">
-      <span>Continue</span>
-      <span class="icon-box">
-        <span class="icon icon-arrow"></span>
-      </span>
-    </button>
   </form>
+
+  <button type="submit" class="btn btn--arrow form__btn" (click)="formSubmit()">
+    <span class=btn-text>Continue</span>
+    <span class="icon-box">
+      <span class="icon icon-arrow"></span>
+    </span>
+  </button>
 </div>

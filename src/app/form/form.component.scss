@@ -5,14 +5,13 @@
 -------------------------------------------------------------- */
 .form {
   position: relative;
+  height: 100%;
   width: 470px;
   max-width: 100%;
-  height: 100%;
   padding: 35px 15px;
-  background-color: $gray-light;
 
   @media #{$media-xs-up} {
-    padding: 50px;
+    padding: 45px 50px;
   }
 
   &:before {
@@ -23,6 +22,8 @@
     height: 2px;
     width: 70px;
     background-color: $green;
+    opacity: 0;
+    animation: 0.5s $cubic-brazier 1.5s 1 normal forwards opacity;
 
     @media #{$media-sm-up} {
       left: 50px;
@@ -30,10 +31,16 @@
     }
   }
 
+  > p,
+  form {
+    opacity: 0;
+    animation: 0.5s $cubic-brazier 1.5s 1 normal forwards subtleSlideFromLeftForm;
+  }
+
   /* Account form title
 -------------------------------------------------------------- */
   &__title {
-    max-width: 300px;
+    max-width: 320px;
     margin-bottom: 20px;
     padding-left: 15px;
     font-size: inherit;
@@ -47,14 +54,28 @@
 -------------------------------------------------------------- */
   &__btn {
     position: absolute;
-    left: calc(50% - 25px);
+    left: 50%;
     bottom: -25px;
+    width: 0;
+    cursor: pointer;
     transform: translateX(-50%);
+    animation: 0.5s $cubic-brazier $animation-delay 1 normal forwards
+      buttonWidthSize;
 
     @media #{$media-sm-up} {
-      right: 0;
-      left: auto;
+      left: calc(100% - 190px);
       transform: none;
+    }
+
+    .btn-text {
+      opacity: 0;
+      animation: 0.5s $cubic-brazier 1.4s 1 normal forwards opacity;
+    }
+
+    .icon-box {
+      transform: scale(0);
+      transform-origin: 50% 100%;
+      animation: 0.5s $cubic-brazier 1.5s 1 normal forwards scale;
     }
   }
 
@@ -62,6 +83,14 @@
 -------------------------------------------------------------- */
   &__box {
     margin-bottom: 20px;
+  }
+
+  /* Account form box title
+-------------------------------------------------------------- */
+  &__box-title {
+    &--margin {
+      margin-bottom: -10px;
+    }
   }
 
   /* Account form input group
@@ -92,7 +121,7 @@
     position: relative;
     display: inline-block;
     padding: 0;
-    margin: 0 20px 0 0;
+    margin: 0 25px 0 0;
 
     &:focus {
       outline: none;
@@ -164,6 +193,7 @@
       position: relative;
       width: 100px;
       border: 2px solid $gray;
+      height: 50px;
 
       @media #{$media-xs-up} {
         width: 130px;

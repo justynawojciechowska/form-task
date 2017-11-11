@@ -1,4 +1,3 @@
-
 @keyframes resizeBackgroundImage {
   0% {
     background-size: 85%;
@@ -26,3 +25,93 @@
   }
 }
 
+@keyframes slideFromLeft {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes subtleSlideFromLeftTitle {
+  0% {
+    opacity: 0;
+    margin-left: 363px;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 373px;
+  }
+}
+
+@keyframes subtleSlideFromLeftForm {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes setWidthSize {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: calc(100% - 40px);
+  }
+}
+
+@keyframes widthSize {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonWidthSize {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 240px;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

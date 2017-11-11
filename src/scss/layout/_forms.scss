@@ -15,10 +15,12 @@ input {
 
 input[type="number"],
 input[type="text"] {
-  height: 50px;
+  height: 55px;
 }
 
 input[type="number"] {
+  -moz-appearance:textfield;
+
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     appearance: none;
@@ -41,10 +43,11 @@ form {
 -------------------------------------------------------------- */
 select{
   background: none;
-  height: 50px;
+  height: 55px;
   border: 0;
   padding: 0 35px 0 15px;
   color: $font-color;
+  -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   border-bottom: 2px solid $gray;
