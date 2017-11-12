@@ -19,7 +19,7 @@ input[type="text"] {
 }
 
 input[type="number"] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
@@ -41,7 +41,7 @@ form {
 
 /* Select
 -------------------------------------------------------------- */
-select{
+select {
   background: none;
   height: 55px;
   border: 0;
@@ -51,13 +51,34 @@ select{
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   border-bottom: 2px solid $gray;
-  background: url('data:image/svg+xml;utf8,<svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="9px" height="5px"> <path fill-rule="evenodd"  opacity="0.251" fill="rgb(47, 48, 48)"  d="M8.036,0.500 L4.500,4.036 L0.964,0.500 "/> </svg>') no-repeat;
+  background: url('data:image/svg+xml;utf8,<svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="9px" height="5px"> <path fill-rule="evenodd"  opacity="0.251" fill="rgb(47, 48, 48)"  d="M8.036,0.500 L4.500,4.036 L0.964,0.500 "/> </svg>')
+    no-repeat;
   background-size: 9px;
   background-position: calc(100% - 15px) center;
   background-repeat: no-repeat;
 
-  &:focus{
+  &:focus {
     outline: none;
     border-color: $violet;
+  }
+}
+
+/* Required fields error
+-------------------------------------------------------------- */
+.validation-failed {
+  position: relative;
+
+  input{
+    border-color: $red;
+  }
+}
+
+.required-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  p {
+    color: $red;
   }
 }

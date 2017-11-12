@@ -14,14 +14,14 @@
   /* Customer account title
 -------------------------------------------------------------- */
   &__title {
-    margin-left: 363px;
     width: 100%;
     height: 50px;
     text-align: center;
     opacity: 0;
-    animation: 0.5s $cubic-brazier 1.5s 1 normal forwards subtleSlideFromLeftTitle;
+    animation: 0.5s $cubic-brazier $animation-delay 1 normal forwards opacity;
 
     @media #{$media-md-up} {
+      animation: 0.5s $cubic-brazier $animation-delay-2 1 normal forwards subtleSlideFromLeftTitle;
       margin-left: 363px;
       text-align: left;
     }
@@ -29,7 +29,7 @@
     h1{
       width: 0;
       overflow: hidden;
-      animation: 1s $cubic-brazier 1.5s 1 normal forwards widthSize;
+      animation: 1s $cubic-brazier $animation-delay-2 1 normal forwards widthSize;
     }
   }
 

@@ -23,7 +23,7 @@
     width: 70px;
     background-color: $green;
     opacity: 0;
-    animation: 0.5s $cubic-brazier 1.5s 1 normal forwards opacity;
+    animation: 0.5s $cubic-brazier $animation-delay-2 1 normal forwards opacity;
 
     @media #{$media-sm-up} {
       left: 50px;
@@ -32,9 +32,9 @@
   }
 
   > p,
-  form {
+  .form_wrapper {
     opacity: 0;
-    animation: 0.5s $cubic-brazier 1.5s 1 normal forwards subtleSlideFromLeftForm;
+    animation: 0.5s $cubic-brazier $animation-delay-2 1 normal forwards subtleSlideFromLeftForm;
   }
 
   /* Account form title
@@ -75,7 +75,7 @@
     .icon-box {
       transform: scale(0);
       transform-origin: 50% 100%;
-      animation: 0.5s $cubic-brazier 1.5s 1 normal forwards scale;
+      animation: 0.5s $cubic-brazier $animation-delay-2 1 normal forwards scale;
     }
   }
 
