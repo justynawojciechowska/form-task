@@ -4,9 +4,5 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit {
-  title = 'Your account';
-
-  ngOnInit() {
-  }
+export class AppComponent {
 }

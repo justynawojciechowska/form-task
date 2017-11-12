@@ -1,5 +1,87 @@
 @import "~scss/helpers/variables";
 @import "~scss/helpers/mixins";
+@import "~scss/helpers/keyframes";
+
+/* Inputs
+-------------------------------------------------------------- */
+input {
+  width: 100%;
+  padding: 15px 15px;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  background: none;
+
+  &:focus {
+    outline: none;
+    border-color: $violet;
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+/* Form
+-------------------------------------------------------------- */
+form {
+  p,
+  label {
+    padding-left: 15px;
+    font-size: 11px;
+    font-size: 1.1rem;
+    color: $gray-light2;
+  }
+}
+
+/* Select
+-------------------------------------------------------------- */
+select {
+  background: none;
+  height: 55px;
+  border: 0;
+  padding: 0 35px 0 15px;
+  color: $font-color;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-bottom: 2px solid $gray;
+  background: url('data:image/svg+xml;utf8,<svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="9px" height="5px"> <path fill-rule="evenodd"  opacity="0.251" fill="rgb(47, 48, 48)"  d="M8.036,0.500 L4.500,4.036 L0.964,0.500 "/> </svg>')
+    no-repeat;
+  background-size: 9px;
+  background-position: calc(100% - 15px) center;
+  background-repeat: no-repeat;
+
+  &:focus {
+    outline: none;
+    border-color: $violet;
+  }
+}
+
+/* Required fields error
+-------------------------------------------------------------- */
+.validation-failed {
+  position: relative;
+
+  input{
+    border-color: $red;
+  }
+}
+
+.required-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  p {
+    color: $red;
+  }
+}
 
 /* Account form
 -------------------------------------------------------------- */
@@ -111,7 +193,12 @@
     }
 
     select {
+      width: 115px;
       margin-right: 15px;
+    }
+
+    select + input{
+      width: calc(100% - 130px);
     }
   }
 
@@ -179,6 +266,8 @@
   /* Account form input
 -------------------------------------------------------------- */
   &__input {
+    height: 55px;
+
     &[type="text"] {
       display: block;
 
