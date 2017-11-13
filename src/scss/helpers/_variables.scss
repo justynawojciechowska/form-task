@@ -21,9 +21,12 @@ $font-color: $gray-dark-2;
 
 /* Animations
 -------------------------------------------------------------- */
+$animation-background: 6s;
+$animation-form: 0.5s;
 $animation-delay: 1.25s;
 $animation-delay-2: 1.5s;
-$cubic-brazier: cubic-bezier(0.85, 0.78, 0.3, 0.93);
+// $cubic-brazier: cubic-bezier(0.85, 0.78, 0.3, 0.93);
+$cubic-brazier: cubic-bezier(0.500, 0.250, 0.310, 0.955);
 
 /* Breakpoints
 -------------------------------------------------------------- */

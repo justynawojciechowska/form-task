@@ -8,6 +8,10 @@
     "build": "ng build",
     "lint": "ng lint"
   },
+   "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",

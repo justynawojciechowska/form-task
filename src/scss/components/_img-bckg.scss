@@ -10,7 +10,7 @@
     top: -93px;
     left: 0;
 
-    animation: 6s ease-in-out 0s 1 resizeBackgroundImage;
+    animation: resizeBackgroundImage $animation-background ease-in-out 0s 1;
 
     &:hover {
       background-size: 100%;
@@ -33,8 +33,8 @@
     background: url("/assets/images/lines-top.png") no-repeat left top;
     background-size: 100%;
 
-    animation: 6s ease-in-out 0s 1 resizeBackgroundImage,
-      6s ease-in-out 0s 1 changeLeftPosition;
+    animation: resizeBackgroundImage $animation-background ease-in-out 0s 1,
+      changeLeftPosition $animation-background ease-in-out 0s 1;
 
     @media #{$media-lg} {
       left: 16%;
@@ -52,7 +52,7 @@
     right: 0;
     background-size: 100%;
 
-    animation: 6s ease-out 0s 1 slideFromBottomRight;
+    animation: slideFromBottomRight $animation-background ease-out 0s 1;
 
     @media #{$media-xs} {
       background: url("/assets/images/lines-mobile.png") no-repeat right bottom;
